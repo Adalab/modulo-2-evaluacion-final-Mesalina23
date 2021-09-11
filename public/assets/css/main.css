@@ -28,6 +28,15 @@ $color-secondary: #999;*/
   height: 18px;
   width: 60px; }
 
+.sections {
+  display: flex;
+  flex-direction: row; }
+  .sections .favoritesSection {
+    background-color: aqua; }
+
+.clickSeries {
+  border: 15px solid blue; }
+
 /*.main__list {
   padding-left: 2rem;
   padding-bottom: 20px;

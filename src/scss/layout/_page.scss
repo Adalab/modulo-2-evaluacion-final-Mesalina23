@@ -2,3 +2,13 @@
   height: 18px;
   width: 60px;
 }
+.sections {
+  display: flex;
+  flex-direction: row;
+  .favoritesSection {
+    background-color: aqua;
+  }
+}
+.clickSeries {
+  border: 15px solid blue;
+}
