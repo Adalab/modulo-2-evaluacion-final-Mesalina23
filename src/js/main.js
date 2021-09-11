@@ -106,13 +106,15 @@ function paintListData() {
   listDataContainer.innerHTML = html ;
   listenListData();
 }
+//10.a añadimos la info al LS:
+function setInLocalStorage (){
+  const stringFavouriteListsData =  JSON.stringify(favouriteListsData);
+  localStorage.setItem ('favouriteListsData', stringFavouriteListsData);
+}
 
-//3. creamos la función manejadora del botón de búsqueda:
-function handleSearchButton(ev) {
-  ev.preventDefault ();
+//10.creamos una función que recoge lo que viene del local storage:
+function getFromApi(){
   let inputValue = inputSearch.value.toLowerCase();
-
-
   //1.solicitamos al api los datos:
   fetch(`//api.tvmaze.com/search/shows?q=${inputValue}`)
     .then((response) => response.json())
@@ -120,17 +122,30 @@ function handleSearchButton(ev) {
       listsData = data;
       //4.llamamos a la función que pintará los datos de la lista:
       paintListData();
+      setInLocalStorage();
     });
 }
-
-//10. creamos una función que recoja lo que nos viene del LS
+//10.b creamos una función que nos permita llamar a la info guardada en el LS:
 function getLocalStorage (){
-
+  const localStorageListsData = localStorage.getItem ('favouriteListsData');
+  if(localStorageListsData ===null){
+    getFromApi();
+  }else{
+    const arrayListsData = JSON.parse (localStorageListsData);
+    favouriteListsData = arrayListsData;
+    paintFavouriteListData();
+    paintListData();
+  }
 }
-
-
-//10.a preguntamos si el local está vacío: en ese caso, llamamos al fecht:
-
-//10.b si el ls no esta vacío, pintamos lo que hay en el ls
+//3. creamos la función manejadora del botón de búsqueda:
+function handleSearchButton(ev) {
+  ev.preventDefault ();
+  getFromApi();
+}
 //2.creamos evento sobre el botón de búsqueda:
 searchButton.addEventListener('click', handleSearchButton);
+
+//12.ejecutamos la función que llama a lo guardado en el ls:
+getLocalStorage();
+
+
