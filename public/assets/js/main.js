@@ -147,14 +147,18 @@ function handleSearchButton(ev) {
 //2.creamos evento sobre el botón de búsqueda:
 searchButton.addEventListener('click', handleSearchButton);
 
-//12.ejecutamos la función que llama a lo guardado en el ls:
-getLocalStorage();
 
+//12 funcion manejadora del input de reset, con el que borramos tanto el contenido de favoritos, como la información almacenada en el LS:
 function handleResetInput() {
   favouriteListsData = [];
   localStorage.clear();
   location.reload();
 }
 resetButton.addEventListener('click', handleResetInput);
+
+//13.ejecutamos la función que llama a lo guardado en el ls:
+getLocalStorage();
+
+
 
 //# sourceMappingURL=main.js.map
