@@ -50,6 +50,7 @@ function handleClickListData(ev){
     favouriteListsData.splice(isFavourite,1);
   }paintFavouriteListData();
   paintListData();
+  setInLocalStorage();
 }
 
 
@@ -150,6 +151,8 @@ searchButton.addEventListener('click', handleSearchButton);
 getLocalStorage();
 
 function handleResetInput() {
+  favouriteListsData = [];
+  localStorage.clear();
   location.reload();
 }
 resetButton.addEventListener('click', handleResetInput);
