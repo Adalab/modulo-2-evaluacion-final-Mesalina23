@@ -88,7 +88,7 @@ function paintListData() {
       favClass='';
     }
     if (listData.show.image !== null){
-      html += `<li id="${listData.show.id}" class="js_liListData ${favClass}">`;
+      html += `<li id="${listData.show.id}" class="js_liListData ${favClass} main__li--listData">`;
       html += `<div class="js_listImageContainer">`;
       html += `<h3>${listData.show.name}</h3>`;
       html += `<img src="${listData.show.image.medium}" class="js_image"/>`;

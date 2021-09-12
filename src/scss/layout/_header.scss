@@ -1,1 +1,16 @@
-
+.header {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $color_darkBody;
+  font-family: $font-header;
+  //position: fixed;
+  &__name {
+    color: $color_logo;
+  }
+  &__title {
+    color: $color_white;
+  }
+}

@@ -29,6 +29,7 @@ $color-secondary: #999;*/
   width: 60px; }
 
 .sections {
+  width: 50vw;
   display: flex;
   flex-direction: row; }
   .sections .favoritesSection {
@@ -37,9 +38,23 @@ $color-secondary: #999;*/
 .clickSeries {
   border: 15px solid blue; }
 
-/*.main__list {
-  padding-left: 2rem;
-  padding-bottom: 20px;
-}*/
+.main__li--listData {
+  list-style: none; }
+
+.header {
+  width: 100vw;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #153c3d;
+  font-family: "Acme", sans-serif; }
+  .header__name {
+    color: rgba(47, 243, 73, 0.5); }
+  .header__title {
+    color: white; }
+
+.page {
+  background-color: #0c494b; }
 
 /*# sourceMappingURL=main.css.map */
