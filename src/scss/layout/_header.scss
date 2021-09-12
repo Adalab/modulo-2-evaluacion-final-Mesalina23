@@ -1,3 +1,14 @@
+@keyframes translate {
+  from {
+    transform: translateY (0);
+  }
+  50% {
+    transform: translateY (-40px);
+  }
+  to {
+    transform: translateY (0);
+  }
+}
 .header {
   width: 100%;
   height: 100px;
@@ -9,6 +20,10 @@
   //position: fixed;
   &__name {
     color: $color_logo;
+  }
+  &__image {
+    height: 60px;
+    animation: translate 4s infinite;
   }
   &__title {
     color: $color_white;

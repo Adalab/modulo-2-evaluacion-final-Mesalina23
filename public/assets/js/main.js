@@ -4,10 +4,11 @@ const inputSearch = document.querySelector('.js_input');
 const searchButton = document.querySelector('.js_searchButton');
 const listDataContainer = document.querySelector('.js_listData');
 const favListsData =document.querySelector('.js_favListsData');
-getFromApi();
+const resetButton = document.querySelector('.js_resetButton');
 let listsData = [];
 //7.a.creamos un nuevo array para las series favoritas:
 let favouriteListsData = [];
+getFromApi();
 
 function paintFavouriteListData() {
   let html2 = '';
@@ -148,6 +149,9 @@ searchButton.addEventListener('click', handleSearchButton);
 //12.ejecutamos la función que llama a lo guardado en el ls:
 getLocalStorage();
 
-
+function handleResetInput() {
+  location.reload();
+}
+resetButton.addEventListener('click', handleResetInput);
 
 //# sourceMappingURL=main.js.map

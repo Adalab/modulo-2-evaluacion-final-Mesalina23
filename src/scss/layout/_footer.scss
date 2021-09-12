@@ -5,13 +5,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
   &__copy {
     color: $color_white;
-    margin-left: 20px;
+    margin-left: 40px;
   }
   &__name {
     color: $color_logo;
-    margin-right: 20px;
+    margin-right: 40px;
     font-family: $font-header;
     font-size: larger;
   }
