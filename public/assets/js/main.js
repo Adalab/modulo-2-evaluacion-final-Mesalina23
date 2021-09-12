@@ -4,7 +4,7 @@ const inputSearch = document.querySelector('.js_input');
 const searchButton = document.querySelector('.js_searchButton');
 const listDataContainer = document.querySelector('.js_listData');
 const favListsData =document.querySelector('.js_favListsData');
-
+getFromApi();
 let listsData = [];
 //7.a.creamos un nuevo array para las series favoritas:
 let favouriteListsData = [];
@@ -13,7 +13,7 @@ function paintFavouriteListData() {
   let html2 = '';
   for(const favData of favouriteListsData){
     if (favData.show.image !== null){
-      html2 += `<li id="${favData.show.id}" class="js_liListData">`;
+      html2 += `<li id="${favData.show.id}" class="js_liListData main__li--favListData">`;
       html2 += `<div class="js_listImageContainer">`;
       html2 += `<h3>${favData.show.name}</h3>`;
       html2 += `<img src="${favData.show.image.medium}" class="js_image"/>`;

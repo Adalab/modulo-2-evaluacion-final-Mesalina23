@@ -10,6 +10,10 @@
       href="https://fonts.googleapis.com/css2?family=Acme&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxygen&family=Patrick+Hand&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="./assets/images/favicon.png" />
   </head>
@@ -21,30 +25,33 @@
         <h2 class="header__title">Tú Buscador de Series!!!</h2>
       </header>
 
-      <main>
+      <main class="main">
         <section>
           <form action="" method="">
             <input
               type="text"
               name="userSearch"
               placeholder="Ej.: Lucifer"
-              class="js_input"
+              class="js_input main__input"
             />
-            <button type="submit" class="button js_searchButton">Search</button>
+            <button type="submit" class="js_searchButton main__button">Search</button>
           </form>
         </section>
         <div class="sections">
-          <section class="favoritesSection">
+          <section class="sections__favoritesSection">
             <h2>Mis series favoritas</h2>
             <ul class="js_favListsData"></ul>
           </section>
-          <section class="searchSection">
+          <section class="sections__searchSection">
             <ul class="js_listData"></ul>
           </section>
         </div>
       </main>
 
-      <footer></footer>
+      <footer class="footer">
+        <small class="footer__copy">mesalina&copy 2021</small>
+        <h1 class="footer__name">CandyFlix</h1>
+      </footer>
 
     </div>
     <script src="./assets/js/main.js"></script>

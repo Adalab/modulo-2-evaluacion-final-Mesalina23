@@ -1,18 +1,54 @@
-.searchButton {
-  height: 18px;
-  width: 60px;
+.main {
+  background-color: $color_body;
+  font-family: $font-page;
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+
+  &__input {
+    padding: 10px;
+    border-radius: 10px;
+    border-color: 2px solid black;
+    margin-left: 20px;
+    margin-top: 10px;
+  }
+  &__button {
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 15px;
+  }
 }
 .sections {
-  width: 50vw;
   display: flex;
   flex-direction: row;
-  .favoritesSection {
-    background-color: aqua;
+  margin: 15px 9px 0 9px;
+  margin-top: 15px;
+  height: auto;
+
+  &__favoritesSection {
+    width: 35%;
+    margin-right: 20px;
+    margin-left: 100px;
+    color: $color_white;
+  }
+  &__searchSection {
+    width: 65%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 .clickSeries {
-  border: 15px solid blue;
+  border: 10px solid $color_logo;
+  color: $color_white;
+  font-size: larger;
 }
 .main__li--listData {
+  list-style: none;
+  display: inline-block;
+  color: $color_white;
+}
+.main__li--favListData {
   list-style: none;
 }
