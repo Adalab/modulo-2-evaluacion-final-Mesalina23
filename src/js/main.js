@@ -17,7 +17,8 @@ function paintFavouriteListData() {
       html2 += `<li id="${favData.show.id}" class="js_liListData main__li--favListData">`;
       html2 += `<div class="js_listImageContainer">`;
       html2 += `<h3>${favData.show.name}</h3>`;
-      html2 += `<img src="${favData.show.image.medium}" class="js_image"/>`;
+      html2 += `<img src="${favData.show.image.medium}" class="js_image main__li--favListimage"/>`;
+      html2 += `<i class="far fa-times-circle main__li--favListicon"></i>`;
       html2 += `</div>`;
       html2 += `</li>`;
     }else{
