@@ -17,7 +17,7 @@ function paintFavouriteListData() {
       html2 += `<li id="${favData.show.id}" class="js_liListData main__li--favListData">`;
       html2 += `<div class="js_listImageContainer">`;
       html2 += `<h3>${favData.show.name}</h3>`;
-      html2 += `<img src="${favData.show.image.medium}" class="js_image main__li--favListimage"/>`;
+      html2 += `<img src="${favData.show.image.medium}" class="js_image main__li--favListimage" alt="carátula de la serie ${favData.show.name}"/>`;
       html2 += `<i class="far fa-times-circle main__li--favListicon"></i>`;
       html2 += `</div>`;
       html2 += `</li>`;
@@ -25,7 +25,8 @@ function paintFavouriteListData() {
       html2 += `<li id="${favData.show.id}" class="js_liListData"> `;
       html2 += `<div class="js_listImageContainer">`;
       html2 += `<h3>${favData.show.name}</h3>`;
-      html2 += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}" class="js_image"/>`;
+      html2 += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}" class="js_image" alt="carátula no disponible"/>`;
+      html2 += `<i class="far fa-times-circle main__li--favListicon"></i>`;
       html2 += `</div>`;
       html2 += `</li>`;
     }
@@ -94,14 +95,14 @@ function paintListData() {
       html += `<li id="${listData.show.id}" class="js_liListData ${favClass} main__li--listData">`;
       html += `<div class="js_listImageContainer">`;
       html += `<h3>${listData.show.name}</h3>`;
-      html += `<img src="${listData.show.image.medium}" class="js_image"/>`;
+      html += `<img src="${listData.show.image.medium}" class="js_image" alt="carátula de la serie ${listData.show.name}"/>`;
       html += `</div>`;
       html += `</li>`;
     }else{
       html += `<li id="${listData.show.id}" class="js_liListData"> `;
       html += `<div class="js_listImageContainer">`;
       html += `<h3>${listData.show.name}</h3>`;
-      html += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}" class="js_image"/>`;
+      html += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}" class="js_image" alt="carátula no disponible"/>`;
       html += `</div>`;
       html += `</li>`;
     }
