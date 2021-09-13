@@ -21,9 +21,11 @@
   &__name {
     color: $color_logo;
   }
-  &__image {
-    height: 60px;
+  &__imageContainer {
     animation: translate 4s infinite;
+    &__image {
+      height: 60px;
+    }
   }
   &__title {
     color: $color_white;

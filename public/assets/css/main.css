@@ -113,10 +113,11 @@ $color-secondary: #999;*/
   font-family: "Acme", sans-serif; }
   .header__name {
     color: rgba(243, 12, 12, 0.815); }
-  .header__image {
-    height: 60px;
+  .header__imageContainer {
     -webkit-animation: translate 4s infinite;
     animation: translate 4s infinite; }
+    .header__imageContainer__image {
+      height: 60px; }
   .header__title {
     color: white; }
 
