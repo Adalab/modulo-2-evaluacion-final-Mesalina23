@@ -29,7 +29,7 @@ $color-secondary: #999;*/
   font-family: "Oxygen", sans-serif;
   width: 100%;
   height: auto;
-  min-height: 100vh; }
+  min-height: 75vh; }
   .main__input {
     padding: 10px;
     border-radius: 10px;
