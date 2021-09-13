@@ -69,5 +69,12 @@
   //display: inline-block;
 }
 .main__li--favListimage {
+  margin-top: 4px;
   height: 180px;
+}
+.far {
+  &:hover {
+    -webkit-transform: scale(1.5);
+    transform: scale(1.5);
+  }
 }
