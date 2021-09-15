@@ -51,9 +51,9 @@ function handleClickListData(ev){
   }else{//eliminamos el que ya esté añadido:
     favouriteListsData.splice(isFavourite,1);
   }
-  //paintFavouriteListData();
-  //paintListData();
-  //setInLocalStorage();
+  paintFavouriteListData();
+  paintListData();
+  setInLocalStorage();
   console.log(selectedSerieId.show.name);
 }
 
@@ -85,7 +85,6 @@ function paintListData() {
   let html = '';
   //9.1 creamos una variable que recoge la clase aplicada cuando sea marcado como favorito:
   let favClass= '';
-  
   for(const listData of listsData){
     //creamos una constante y creamos la condición por la que sólo is es favorita,  será añadida la clase.
     const isFav = liFav(listData);
@@ -151,7 +150,7 @@ function getLocalStorage (){
   }else{
     const arrayListsData = JSON.parse (localStorageListsData);
     favouriteListsData = arrayListsData;
-    //paintFavouriteListData();
+    paintFavouriteListData();
     paintListData();
   }
 }
