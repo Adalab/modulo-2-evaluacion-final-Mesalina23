@@ -50,9 +50,11 @@ function handleClickListData(ev){
     favouriteListsData.push(selectedSerieId);
   }else{//eliminamos el que ya esté añadido:
     favouriteListsData.splice(isFavourite,1);
-  }paintFavouriteListData();
-  paintListData();
-  setInLocalStorage();
+  }
+  //paintFavouriteListData();
+  //paintListData();
+  //setInLocalStorage();
+  console.log(selectedSerieId.show.name);
 }
 
 
@@ -83,9 +85,11 @@ function paintListData() {
   let html = '';
   //9.1 creamos una variable que recoge la clase aplicada cuando sea marcado como favorito:
   let favClass= '';
+  
   for(const listData of listsData){
     //creamos una constante y creamos la condición por la que sólo is es favorita,  será añadida la clase.
     const isFav = liFav(listData);
+    let genres = listData.show.genres;
     if(isFav){
       favClass='clickSeries';
     }else{
@@ -95,6 +99,11 @@ function paintListData() {
       html += `<li id="${listData.show.id}" class="js_liListData ${favClass} main__li--listData">`;
       html += `<div class="js_listImageContainer">`;
       html += `<h3>${listData.show.name}</h3>`;
+      html += `<ul>`;
+      for (const eachGenre of genres){
+        html += `<li>${eachGenre}</li>`;
+      }
+      html +=  `</ul>`;
       html += `<img src="${listData.show.image.medium}" class="js_image" alt="carátula de la serie ${listData.show.name}"/>`;
       html += `</div>`;
       html += `</li>`;
@@ -102,6 +111,11 @@ function paintListData() {
       html += `<li id="${listData.show.id}" class="js_liListData"> `;
       html += `<div class="js_listImageContainer">`;
       html += `<h3>${listData.show.name}</h3>`;
+      html += `<ul>`;
+      for (const eachGenre of genres){
+        html += `<li>${eachGenre}</li>`;
+      }
+      html +=  `</ul>`;
       html += `<img src="https://via.placeholder.com/210x295/ffffff/666666/?text=TV}" class="js_image" alt="carátula no disponible"/>`;
       html += `</div>`;
       html += `</li>`;
@@ -137,7 +151,7 @@ function getLocalStorage (){
   }else{
     const arrayListsData = JSON.parse (localStorageListsData);
     favouriteListsData = arrayListsData;
-    paintFavouriteListData();
+    //paintFavouriteListData();
     paintListData();
   }
 }
